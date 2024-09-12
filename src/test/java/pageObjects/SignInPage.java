@@ -30,6 +30,13 @@ package pageObjects;
 	    @FindBy(xpath = "//div[contains(text(),'The account sign-in was incorrect')]")
 	    WebElement Errormsg;
 	    
+	    @FindBy(xpath = "//div[@id='pass-error']")
+	    WebElement PassValidationMsg;
+	    
+	    @FindBy(xpath = "//div[@id='email-error']")
+	    WebElement EmailValidationMsg;
+	    
+	    
 	    public void CustomerLoginText() {
 	    	
 	    	CustomerLogin.isDisplayed();
@@ -54,6 +61,14 @@ package pageObjects;
 
 	    public void verifyErrorMessage() {
 	    	Errormsg.isDisplayed();
+	    }
+	    
+	    public void validatePasswordFieldRequired() {
+	    	PassValidationMsg.isDisplayed();
+	    }
+	    
+	    public void validateEmailFieldRequired() {
+	    	EmailValidationMsg.isDisplayed();
 	    }
 
 

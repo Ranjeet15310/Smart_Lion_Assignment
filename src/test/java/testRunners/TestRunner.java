@@ -7,7 +7,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    features = ".//features//SignUP.feature",
+    features = {".//features//AccountCreation.feature",".//features//SignUP.feature"
+    		
+    },
     glue = {"stepDifinitionss"},
     		plugin= {
             	    "pretty", "html:reports/Cucumber_report.html", 
@@ -16,6 +18,6 @@ import io.cucumber.junit.CucumberOptions;
             		}, 
     monochrome = false
 )
-public class TestRunner {
+public class TestRunner{
 
 }

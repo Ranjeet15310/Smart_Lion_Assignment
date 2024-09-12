@@ -129,6 +129,20 @@ public class AccountCreationSteps{
     public void the_user_is_getting_error_message() {
         SI.verifyErrorMessage();
     }
+    
+    @Then("The user is getting validation message as This is a required field.")
+    public void the_user_is_getting_validation_message_as_this_is_a_required_field() {
+        // Write code here that turns the phrase above into concrete actions
+        SI.validatePasswordFieldRequired();
+    }
+
+    @Then("The user is getting validation message as email and password is a required field.")
+    public void the_user_is_getting_validation_message_as_email_and_password_is_a_required_field() {
+        // Write code here that turns the phrase above into concrete actions
+        SI.validateEmailFieldRequired();
+        SI.validatePasswordFieldRequired();
+    }
+
 
 
 }

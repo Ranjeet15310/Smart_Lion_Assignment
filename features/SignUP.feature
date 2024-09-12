@@ -48,7 +48,7 @@ Feature: Sign In flow
     Then Sign In page is opened 
     When The user enters Email as "rk1134351511e@gmail.com" and password as ""
     And Click on the sign In button
-    Then The user is getting Error message.
+    Then The user is getting validation message as This is a required field.
     
   Scenario: Sign In with blank email and blank password
     Given User Launch browser
@@ -58,6 +58,6 @@ Feature: Sign In flow
     Then Sign In page is opened 
     When The user enters Email as "" and password as ""
     And Click on the sign In button
-    Then The user is getting Error message.  
+    Then The user is getting validation message as email and password is a required field.  
     
     
